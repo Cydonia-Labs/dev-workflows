@@ -315,8 +315,6 @@ import "@testing-library/jest-dom/vitest";
 
 ### Don't Bother Testing
 
-- **Trivial getters/setters** with no logic.
-- **Third-party library behavior** — that's their job.
 - **Implementation details** that might change during refactoring.
 - **UI layout** (unless it's a critical user flow — use E2E for that).
 - **React component snapshots** — they break on every visual change and test nothing meaningful. Test behavior instead.
