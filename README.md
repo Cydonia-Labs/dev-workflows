@@ -29,7 +29,9 @@ This repo documents development workflows, best practices, and standards that st
 | [Environment Setup](docs/environment-setup.md) | Local dev, staging, production environment management |
 | [Deployment](docs/deployment.md) | Release process, rollback strategy, deploy checklist |
 | [Security Practices](docs/security.md) | Secrets management, dependency scanning, secure defaults |
+| [Secure Coding](docs/secure-coding.md) | Input validation, auth, API security, data protection, XSS prevention |
 | [Onboarding](docs/onboarding.md) | New engineer checklist, access provisioning, first-week guide |
+| [Workflow Automation](docs/workflow-automation.md) | Enforcing standards via CI, AI review commands, and PR templates |
 | [AI-Assisted Development](docs/ai-assisted-dev.md) | Working with Claude Code and other AI coding assistants |
 
 ## Stack
