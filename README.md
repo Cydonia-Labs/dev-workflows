@@ -24,12 +24,12 @@ This repo documents development workflows, best practices, and standards that st
 | [Environment Setup](docs/environment-setup.md) | Local dev, staging, production environment management |
 | [Onboarding](docs/onboarding.md) | New engineer checklist, access provisioning, first-week guide |
 | [Secure Coding](docs/secure-coding.md) | Input validation, auth, API security, data protection, XSS prevention |
+| [Security Practices](docs/security.md) | Secrets management, dependency scanning, secure defaults |
 | [Git & Branching](docs/git-branching.md) | Branch strategy, commit conventions, PR workflow |
 | [Coding Style](docs/coding-style.md) | Documentation standards, naming, formatting, error handling |
 | [Testing](docs/testing.md) | Test strategy, coverage expectations, when to test what |
 | [Code Review](docs/code-review.md) | Review standards, what to look for, async review tips |
 | [CI/CD](docs/ci-cd.md) | Pipeline design, automated checks, deployment gates |
-| [Security Practices](docs/security.md) | Secrets management, dependency scanning, secure defaults |
 | [Deployment](docs/deployment.md) | Release process, rollback strategy, deploy checklist |
 | [Workflow Automation](docs/workflow-automation.md) | Enforcing standards via CI, AI review commands, and PR templates |
 | [AI-Assisted Development](docs/ai-assisted-dev.md) | Working with Claude Code and other AI coding assistants |
