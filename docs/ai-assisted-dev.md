@@ -204,6 +204,8 @@ For complex tasks, use multiple AI passes:
 
 Each pass catches things the previous one missed.
 
+When multiple agents are working in parallel, use a human-led coordination model instead of ad hoc chat. GitHub should hold durable state, Slack should route short coordination, and the human owner should remain the final decision maker. See [Human-Led Multi-Agent Workflows](multi-agent-workflows.md) for PR handoffs, review summaries, merge-ready messages, long-running `[gates-clean]` approvals, and post-merge checks.
+
 ## Tools and Configuration
 
 ### Recommended Setup
@@ -223,6 +225,8 @@ Document your AI usage conventions in `CLAUDE.md`:
 - Complex architecture decisions require human sign-off
 - AI-generated commits include Co-Authored-By trailer
 ```
+
+For larger agent teams, also maintain project-local agent instructions. These should define roles, branch rules, communication tags, runtime assumptions, safety gates, and approval boundaries. See [Agent Instructions Reference](agent-instructions-reference.md) for a reusable template.
 
 ## Scaling Checklist
 

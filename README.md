@@ -33,6 +33,8 @@ This repo documents development workflows, best practices, and standards that st
 | [Deployment](docs/deployment.md) | Release process, rollback strategy, deploy checklist |
 | [Workflow Automation](docs/workflow-automation.md) | Enforcing standards via CI, AI review commands, and PR templates |
 | [AI-Assisted Development](docs/ai-assisted-dev.md) | Working with Claude Code and other AI coding assistants |
+| [Human-Led Multi-Agent Workflows](docs/multi-agent-workflows.md) | Coordinating multiple agents through GitHub, Slack handoffs, review gates, and long-running approvals |
+| [Agent Instructions Reference](docs/agent-instructions-reference.md) | Template rules for project-local agent roles, communication, safety gates, and runtime awareness |
 
 ## Stack
 
