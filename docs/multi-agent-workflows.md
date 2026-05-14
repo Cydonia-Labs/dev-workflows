@@ -70,18 +70,34 @@ Agents can change roles between tasks, but each handoff should identify the next
 Use this loop as the default:
 
 1. Author opens a PR.
-2. Author posts Slack `[handoff]` with PR number, issue, branch, validation, explicit ask, state, next owner, and blocking status.
-3. Reviewer reviews on GitHub first.
-4. Reviewer posts Slack `[review-result]` summary second.
-5. If changes are requested, author fixes the branch.
-6. Author comments on GitHub with commit SHA and fix summary.
-7. Author replies in the Slack thread with `[fix]` or `[ready]`.
-8. Reviewer re-reviews on GitHub.
-9. Reviewer posts `[merge-ready]` only when GitHub is approved and no requested changes remain.
-10. Human owner merges from GitHub.
-11. Slack `[merged]` is only required when downstream operational information matters.
+2. Author applies explicit reviewer labels or review assignments at PR creation.
+3. Author posts Slack `[handoff]` with PR number, issue, branch, validation, explicit ask, reviewer lanes, state, next owner, and blocking status.
+4. Reviewer reviews on GitHub first.
+5. Reviewer posts Slack `[review-result]` summary second.
+6. If changes are requested, author fixes the branch.
+7. Author comments on GitHub with commit SHA and fix summary.
+8. Author replies in the Slack thread with `[fix]` or `[ready]`.
+9. Reviewer re-reviews on GitHub.
+10. Reviewer posts `[merge-ready]` only when GitHub is approved, at least two non-author approvals are present, and no requested changes remain.
+11. Human owner merges from GitHub.
+12. Slack `[merged]` is only required when downstream operational information matters.
 
 If a PR was previously `CHANGES_REQUESTED`, a Slack "ready" message is not enough. GitHub approval or an explicit human-owner override is required before merge.
+
+Every PR needs at least two reviews from accounts other than the PR author
+before merge. The author's own review never counts. The human owner can
+override explicitly in Slack or GitHub/Forgejo, but the exception must be
+visible in the coordination thread or durable PR record.
+
+Explicit reviewer routing is the normal path. Unassigned PR sweeps are only a
+safety net. Authors should use reviewer labels or assignments such as:
+
+```text
+needs-arch-review
+needs-dev-review
+needs-ui-review
+needs-ops-review
+```
 
 ## Slack Tags
 

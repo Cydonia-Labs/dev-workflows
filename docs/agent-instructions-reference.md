@@ -242,17 +242,34 @@ Blocking: yes/no
 ## Required PR Flow
 
 1. GitHub PR or comment first.
-2. Slack handoff second.
-3. Reviewer reviews on GitHub first.
-4. Reviewer posts Slack summary second.
-5. Owner fixes branch.
-6. Owner comments on GitHub with commit SHA.
-7. Owner posts Slack `[fix]` or `[ready]`.
-8. Reviewer re-reviews on GitHub.
-9. Reviewer posts `[merge-ready]` only after GitHub approval.
-10. Human owner merges.
+2. Author applies explicit reviewer labels or assignments at PR creation.
+3. Slack handoff second, naming reviewer lanes.
+4. Reviewer reviews on GitHub first.
+5. Reviewer posts Slack summary second.
+6. Owner fixes branch.
+7. Owner comments on GitHub with commit SHA.
+8. Owner posts Slack `[fix]` or `[ready]`.
+9. Reviewer re-reviews on GitHub.
+10. Reviewer posts `[merge-ready]` only after the PR has at least two
+    non-author approvals and no requested changes.
+11. Human owner merges.
 
 A Slack `[ready]` message alone is not merge-ready.
+
+Every PR needs at least two reviews from accounts other than the PR author
+before merge. The author's own review never counts. The human owner can
+override explicitly in Slack or GitHub/Forgejo, but the override must be visible
+and durable enough for the team to understand the exception.
+
+Authors should not rely on unassigned PR fallback alerts as the normal route.
+Use explicit reviewer labels or assignments, for example:
+
+```text
+needs-arch-review
+needs-dev-review
+needs-ui-review
+needs-ops-review
+```
 
 ## Monitoring And SLA
 
@@ -320,4 +337,3 @@ Capture:
 - actionable changes.
 
 Do not wait until the end of a cycle. Capture lessons while they are fresh.
-
